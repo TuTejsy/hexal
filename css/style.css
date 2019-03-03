@@ -136,7 +136,7 @@ body {
     background: url('../img/hex-img-3.jpeg') no-repeat center;
 }
 .hex-img-4 {
-    background: url('../img/hex-img-4.jpeg') no-repeat center -17px;
+    background: url('../img/hex-img-4.jpeg') no-repeat center;
 }
 .hex-img-5 {
     background: url('../img/hex-img-5.jpeg') no-repeat center;
@@ -533,6 +533,15 @@ body {
         max-width: 750px;
     }
 
+    .hexagon-container {
+        padding-top: 70px;
+        padding-bottom: 100px;
+    }
+
+    .row-native:last-child::after {
+        bottom: -90px;
+    }
+
     .hexagon {
         width: 130px;
         height: 160px;
@@ -579,8 +588,8 @@ body {
         }
 
         .hexagon-container {
-            padding: 70px 0;
-            padding-bottom: 110px;
+            padding-top: 70px;
+            padding-bottom: 90px;
         }
 
         .hexagon {
@@ -590,7 +599,7 @@ body {
         }
     
         .row-native:last-child::after {
-            bottom: -100px;
+            bottom: -80px;
         }
         .line {
             display: none;
@@ -663,6 +672,14 @@ body {
     }
 
     @media only screen and (min-width: 320px) and (max-width: 480px) {
+        .hexagon-container {
+            padding-top: 60px;
+            padding-bottom: 70px;
+        }
+
+        .row-native:last-child::after {
+            bottom: -60px;
+        }
         .page-header-nav .nav-logo {
             margin: 0 10px;
         }
