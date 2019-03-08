@@ -454,8 +454,16 @@
     letter-spacing: -0.45px;
 }
 
+textarea:active, textarea:focus,
+input:active, input:focus {
+    box-shadow: 0 0 1px 1px #B4FC41;
+    border-radius: 3px;
+    transition: 0.1s ease-in;
+} 
+
 .page-footer-form-button {
     display: block;
+    position: relative;
     float: right;
     text-transform: uppercase;
     padding: 11px 29px;
@@ -466,16 +474,31 @@
     font-weight: 700;
     background-color: #2eb398;
     border: none;
+    cursor: pointer;
+}
+.page-footer-form-button::after {
+    display: none;
+    content: "";
+    height: 1px;
+    left: 5%;
+    width: 90%;
+    position: absolute;
+    bottom: -4px;
+    background-color: #B4FC41;
+    transition: 0.1s ease-in;
 }
 
-.page-footer-form-button:hover {
-    box-shadow: 0 3px 5px -3px #B4FC41;
-    transition: 0.1s ease-in;
+.page-footer-form-button:hover::after {
+    display: block;
 }
 .page-footer-form-button:active {
-    box-shadow: 0 3px 5px -3px #B4FC41;
+    box-shadow: 0 0 0 1px #B4FC41;
     color: #B4FC41;
     transition: 0.1s ease-in;
+    border-radius: 3px;
+}
+.page-footer-form-button:active::after {
+    bottom: -1px;
 }
 
 .footer-info {
